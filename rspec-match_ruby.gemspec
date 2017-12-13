@@ -1,11 +1,10 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rspec/match_ruby/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'rspec-match_ruby'
-  spec.version       = Rspec::MatchRuby::VERSION
+  spec.version       = '0.1.1'
   spec.authors       = ['winebarrel']
   spec.email         = ['sugawara@winebarrel.jp']
 

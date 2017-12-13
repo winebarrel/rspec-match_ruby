@@ -1,8 +1,7 @@
 require 'parser/current'
 require 'rspec'
 
-require 'rspec/match_ruby/version'
-require 'rspec/match_ruby/match_ruby'
+require 'rspec/rspec_match_ruby'
 
 RSpec::Matchers.define :match_ruby do |expected|
   unless expected.is_a?(String)
@@ -14,7 +13,7 @@ RSpec::Matchers.define :match_ruby do |expected|
       raise TypeError, "wrong actual type #{expected.class} (expected String)"
     end
 
-    Rspec::MatchRuby.match(expected, actual)
+    RSpecMatchRuby.match(expected, actual)
   end
 
   failure_message do |actual|
@@ -25,8 +24,8 @@ RSpec::Matchers.define :match_ruby do |expected|
     actual_normalized = normalize.call(actual)
     expected_normalized = normalize.call(expected)
 
-    actual_ast = Rspec::MatchRuby.parse(actual)
-    expected_ast = Rspec::MatchRuby.parse(expected)
+    actual_ast = RSpecMatchRuby.parse(actual)
+    expected_ast = RSpecMatchRuby.parse(expected)
 
     message = <<-EOS.strip
 expected: #{expected_normalized.inspect}

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-match_ruby (0.1.0)
+    rspec-match_ruby (0.1.1)
       parser
       rspec (~> 3)
 
