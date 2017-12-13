@@ -1,4 +1,4 @@
-# rspec-match_fuzzy
+# rspec-match_ruby
 
 It is Ruby code matcher.
 
