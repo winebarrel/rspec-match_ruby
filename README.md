@@ -2,6 +2,7 @@
 
 It is Ruby code matcher.
 
+[![Gem Version](https://badge.fury.io/rb/rspec-match_ruby.svg)](https://badge.fury.io/rb/rspec-match_ruby)
 [![Build Status](https://travis-ci.org/winebarrel/rspec-match_ruby.svg?branch=master)](https://travis-ci.org/winebarrel/rspec-match_ruby)
 
 ## Installation
