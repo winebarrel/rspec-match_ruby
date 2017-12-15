@@ -9,8 +9,8 @@ RSpec::Matchers.define :match_ruby do |expected|
   end
 
   match do |actual|
-    unless expected.is_a?(String)
-      raise TypeError, "wrong actual type #{expected.class} (expected String)"
+    unless actual.is_a?(String)
+      raise TypeError, "wrong actual type #{actual.class} (expected String)"
     end
 
     RSpecMatchRuby.match(expected, actual)
