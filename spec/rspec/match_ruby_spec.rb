@@ -46,13 +46,13 @@ RSpec.describe 'match_ruby' do
     specify do
       expect {
         expect(1).to match_ruby ''
-      }.to raise_error(TypeError, 'wrong actual type Integer (expected String)')
+      }.to raise_error(TypeError, /wrong actual type (Integer|Fixnum) \(expected String\)/)
     end
 
     specify do
       expect {
         expect('').to match_ruby 1
-      }.to raise_error(TypeError, 'wrong expected type Integer (expected String)')
+      }.to raise_error(TypeError, /wrong expected type (Integer|Fixnum) \(expected String\)/)
     end
   end
 end
