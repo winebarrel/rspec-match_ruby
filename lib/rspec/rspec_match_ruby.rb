@@ -11,6 +11,8 @@ module RSpecMatchRuby
   module_function :match
 
   def expand_node(node)
+    return nil if node.nil?
+
     children = node.children
 
     if node.type == :hash

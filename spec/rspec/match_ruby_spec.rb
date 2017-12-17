@@ -35,4 +35,24 @@ RSpec.describe 'match_ruby' do
       EOS
     end
   end
+
+  context 'when empty string' do
+    specify do
+      expect('').to match_ruby ''
+    end
+  end
+
+  context 'when not string' do
+    specify do
+      expect {
+        expect(1).to match_ruby ''
+      }.to raise_error(TypeError, 'wrong actual type Integer (expected String)')
+    end
+
+    specify do
+      expect {
+        expect('').to match_ruby 1
+      }.to raise_error(TypeError, 'wrong expected type Integer (expected String)')
+    end
+  end
 end
