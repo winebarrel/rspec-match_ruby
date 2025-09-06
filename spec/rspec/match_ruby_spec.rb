@@ -23,6 +23,14 @@ RSpec.describe 'match_ruby' do
     end
   end
 
+  context 'when expects to match, but not' do
+    specify do
+      expect {
+        expect("").to match_ruby expected
+      }.to raise_error(RSpec::Expectations::ExpectationNotMetError, /Diff:/)
+    end
+  end
+
   context 'when not match' do
     specify do
       expect(<<-EOS).to_not match_ruby expected
