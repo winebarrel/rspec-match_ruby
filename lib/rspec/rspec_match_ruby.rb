@@ -1,4 +1,6 @@
 module RSpecMatchRuby
+  DEFAULT_DIFF_LABEL = "Diff:".freeze
+
   def parse(str)
     node = Parser::CurrentRuby.parse(str)
     expand_node(node)

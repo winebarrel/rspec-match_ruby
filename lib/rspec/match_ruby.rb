@@ -36,7 +36,7 @@ expected: #{expected_normalized.inspect}
     ast_diff = RSpec::Expectations.differ.diff(actual_ast.pretty_inspect, expected_ast.pretty_inspect)
 
     if not diff.empty? or not ast_diff.empty?
-      message << "\n\n" << RSpec::Matchers::ExpectedsForMultipleDiffs::DEFAULT_DIFF_LABEL
+      message << "\n\n" << RSpecMatchRuby::DEFAULT_DIFF_LABEL
     end
 
     unless diff.strip.empty?
